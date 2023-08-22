@@ -40,6 +40,11 @@ const project = {
       type: "url",
     },
     {
+      name: "githubUrl",
+      title: "GitHub URL",
+      type: "url",
+    },
+    {
       name: "coverImage",
       title: "Cover Image",
       type: "image",
@@ -59,6 +64,16 @@ const project = {
       type: "array",
       description: "Write a full description about this project",
       of: [{ type: "block" }],
+    },
+    {
+      name: "skills",
+      title: "Skills",
+      type: "array",
+      description: "Add a list of skills",
+      of: [{ 
+        type: "reference",
+        to: [{ type: "skill" }] 
+      }],
     },
   ],
 };

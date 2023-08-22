@@ -1,5 +1,3 @@
-// schemas/profile.ts
-
 import { defineField } from "sanity";
 import { BiUser } from "react-icons/bi";
 
@@ -76,22 +74,10 @@ const profile = {
           initialValue: "https://github.com/",
         },
         {
-          name: "linkedin",
-          title: "Linkedin URL",
+          name: "linkedIn",
+          title: "LinkedIn URL",
           type: "url",
           initialValue: "https://linkedin.com/in/",
-        },
-        {
-          name: "twitter",
-          title: "Twitter URL",
-          type: "url",
-          initialValue: "https://twitter.com/",
-        },
-        {
-          name: "twitch",
-          title: "Twitch URL",
-          type: "url",
-          initialValue: "https://twitch.com/",
         },
       ],
       options: {
@@ -105,7 +91,10 @@ const profile = {
       title: "Skills",
       type: "array",
       description: "Add a list of skills",
-      of: [{ type: "string" }],
+      of: [{ 
+        type: "reference",
+        to: [{ type: "skill" }] 
+      }],
     },
   ],
 };

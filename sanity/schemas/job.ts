@@ -22,6 +22,9 @@ const job = {
       name: "logo",
       title: "Company Logo",
       type: "image",
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: "url",
@@ -31,9 +34,24 @@ const job = {
     {
       name: "description",
       title: "Job Description",
-      type: "text",
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
       rows: 3,
       description: "Write a brief description about this role",
+    },
+    {
+      name: "skills",
+      title: "Skills",
+      type: "array",
+      description: "Add a list of skills",
+      of: [{ 
+        type: "reference",
+        to: [{ type: "skill" }] 
+      }],
     },
     {
       name: "startDate",

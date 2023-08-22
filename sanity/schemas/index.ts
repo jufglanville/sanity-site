@@ -1,5 +1,6 @@
 import profile from "./profile";
 import job from "./job";
 import project from "./project";
+import skill from "./skill";
 
-export const schemaTypes = [profile, job, project]
+export const schemas = [profile, job, project, skill]

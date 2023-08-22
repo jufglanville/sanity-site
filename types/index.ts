@@ -23,7 +23,8 @@ export type JobType = {
   jobTitle: string;
   logo: string;
   url: string;
-  description: string;
+  description: PortableTextBlock[];
+  skills: string[];
   startDate: Date;
   endDate: Date;
 };
@@ -34,10 +35,20 @@ export type ProjectType = {
   slug: string;
   tagline: string;
   projectUrl: string;
+  githubUrl: string;
+  skills: string[];
   logo: string;
   coverImage: {
     alt: string | null;
     image: string;
   };
   description: PortableTextBlock[];
+};
+
+export type PageType = {
+  _id: string;
+  _createdAt: string;
+  title: string;
+  slug: string;
+  content: PortableTextBlock[];
 };
