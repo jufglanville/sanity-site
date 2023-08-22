@@ -49,6 +49,7 @@ export default async function Project({ params }: Props) {
         <div className="flex justify-end gap-3 mt-4 fle">
           <a
             href={project.projectUrl}
+            target="_blank"
             rel="noreferrer noopener"
             className="bg-[#1d1d20] text-white hover:border-zinc-700 border border-transparent rounded-md px-4 py-2 cursor-pointer"
           >
@@ -56,6 +57,7 @@ export default async function Project({ params }: Props) {
           </a>
           <a
             href={project.githubUrl}
+            target="_blank"
             rel="noreferrer noopener"
             className="bg-[#1d1d20] text-white hover:border-zinc-700 border border-transparent rounded-md px-4 py-2 cursor-pointer"
           >
@@ -64,7 +66,7 @@ export default async function Project({ params }: Props) {
         </div>
 
 
-        <div className="flex flex-col gap-y-1 mt-8 leading-7 text-zinc-400 prose prose-white prose-ul:disc dark:prose-invert prose-p:m-0">
+        <div className="flex flex-col gap-y-1 mt-8 leading-7 text-zinc-400 prose prose-white prose-ul:disc dark:prose-invert prose-p:m-0 max-w-none">
           <PortableText value={project.description} />
         </div>
         <div>
