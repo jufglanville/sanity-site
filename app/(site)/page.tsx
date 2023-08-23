@@ -68,7 +68,7 @@ export default async function Home() {
       <section className="mt-20 lg:mt-8">
         <h2 className="text-2xl font-bold tracking-tight mb-2 sm:text-3xl lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full">Tech I Use</h2>
         <p className="text-zinc-400 mb-8">
-          Curious about the tech I play around with? Here's a glimpse of the
+          Curious about the tech I play around with? Here&apos;s a glimpse of the
           tools I use as a Full Stack Engineer. From creating smooth interfaces
           to exploring the backend, check out my tech lineup:
         </p>
