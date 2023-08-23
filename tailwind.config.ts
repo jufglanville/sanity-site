@@ -27,6 +27,10 @@ const config: Config = {
           },
           li: {
             listStyleType: 'disc',
+          },
+          h2: {
+            margin: '2rem 0 1rem 0',
+            fontSize: '1.5rem',
           }
         },
       },
