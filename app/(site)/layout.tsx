@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-zinc-900 text-white flex flex-col min-h-screen`}>
         <Navbar />
-        <main className="lg:max-w-7xl w-full mx-auto max-w-3xl md:px-16 px-6">
+        <main className="lg:max-w-7xl w-full mx-auto max-w-3xl md:px-16 px-6 mt-32 md:mt-48">
           {children}
         </main>
         <Footer />
