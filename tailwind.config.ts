@@ -14,6 +14,23 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    typography: {
+      DEFAULT: {
+        css: {
+          color: '#dadada',
+          p: {
+            color: '#dadada',
+            marginBottom: '1rem',
+          },
+          strong: {
+            color: '#dadada',
+          },
+          li: {
+            listStyleType: 'disc',
+          }
+        },
+      },
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),

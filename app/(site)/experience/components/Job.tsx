@@ -32,7 +32,7 @@ export const Job = ({job}: Props) => {
         <small className="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
           {job.startDate.toString()} - {job.endDate.toString()}
         </small>
-        <div className="my-4 prose prose-white prose-ul:disc dark:prose-invert max-w-none prose-li:m-0">
+        <div className="my-4 prose max-w-none">
           <PortableText value={job.description} />
         </div>
         <h4 className="text-xl font-bold my-4">Technologies</h4>
