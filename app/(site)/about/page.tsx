@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getProfile } from "@/sanity/sanity.query";
 import { PortableText } from "@portabletext/react";
-import { BiEnvelope, BiFile } from "react-icons/bi";
+import { BiEnvelope, BiFile, BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
 import Skills from "../components/Skills";
 
 export default async function About() {
@@ -24,10 +24,10 @@ export default async function About() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12">
+        <div className="flex flex-col justify-self-start gap-y-8 lg:order-1 order-none mb-12 w-full lg:w-auto lg:ml-auto">
           <div>
             <Image
-              className="rounded-2xl mb-4 object-cover max-h-96 min-h-96 bg-top bg-[#1d1d20]"
+              className="rounded-2xl mb-4 object-cover max-h-96 min-h-96 bg-top bg-[#1d1d20] mx-auto"
               src={profile.profileImage.image}
               width={400}
               height={400}
@@ -47,10 +47,28 @@ export default async function About() {
             <li>
               <a
                 href={`mailto:${profile.email}`}
-                className="flex items-center gap-x-2 hover:text-purple-400 duration-300"
+                className="flex items-center justify-end gap-x-2 hover:text-purple-400 duration-300 mb-1"
               >
                 <BiEnvelope className="text-lg" />
                 {profile.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={profile.github}
+                className="flex items-center justify-end gap-x-2 hover:text-purple-400 duration-300 mb-1"
+              >
+                <BiLogoGithub className="text-lg" />
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href={profile.linkedin}
+                className="flex items-center justify-end gap-x-2 hover:text-purple-400 duration-300 mb-1"
+              >
+                <BiLogoLinkedinSquare className="text-lg" />
+                LinkedIn
               </a>
             </li>
           </ul>
@@ -58,13 +76,18 @@ export default async function About() {
       </section>
 
       <section className="mt-20 lg:mt-8 mb-20">
-        <h2 className="font-semibold text-4xl mb-4">Expertise</h2>
-        <p className="text-zinc-400 max-w-lg mb-8">
-          I&apos;ve spent a few years working on my skills. In no particular
-          order, here are a few of them.
+        <h2 className="font-semibold text-4xl mb-4">Let&apos;s Chat</h2>
+        <p className="text-zinc-400 mb-8">
+          Have a project you&apos;d like to discuss? I&apos;m always open to new
+          opportunities, so feel free to reach out to me at{" "}
+          <a
+            href={`mailto:${profile.email}`}
+            className=" hover:text-purple-400 duration-300"
+          >
+            {profile.email}
+          </a>
+          . I&apos;ll get back to you as soon as I can!
         </p>
-
-        <Skills skills={profile.skills} />
       </section>
     </>
   );

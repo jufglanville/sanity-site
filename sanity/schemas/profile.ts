@@ -18,7 +18,7 @@ const profile = {
       title: "Headline",
       type: "string",
       description: "In one short sentence, what do you do?",
-      validation: (Rule) => Rule.required().min(40).max(50),
+      validation: (Rule) => Rule.required().min(40).max(120),
     }),
     {
       name: "profileImage",
@@ -46,6 +46,16 @@ const profile = {
       type: "string",
     },
     {
+      name: "github",
+      title: "GitHub Address",
+      type: "string",
+    },
+    {
+      name: "linkedin",
+      title: "LinkedIn Address",
+      type: "string",
+    },
+    {
       name: "location",
       title: "Location",
       type: "string",
@@ -61,31 +71,31 @@ const profile = {
       title: "Upload Resume",
       type: "file",
     },
-    {
-      name: "socialLinks",
-      title: "Social Links",
-      type: "object",
-      description: "Add your social media links:",
-      fields: [
-        {
-          name: "github",
-          title: "Github URL",
-          type: "url",
-          initialValue: "https://github.com/",
-        },
-        {
-          name: "linkedIn",
-          title: "LinkedIn URL",
-          type: "url",
-          initialValue: "https://linkedin.com/in/",
-        },
-      ],
-      options: {
-        collapsed: false,
-        collapsible: true,
-        columns: 2,
-      },
-    },
+    // {
+    //   name: "socialLinks",
+    //   title: "Social Links",
+    //   type: "object",
+    //   description: "Add your social media links:",
+    //   fields: [
+    //     {
+    //       name: "github",
+    //       title: "Github URL",
+    //       type: "url",
+    //       initialValue: "https://github.com/",
+    //     },
+    //     {
+    //       name: "linkedIn",
+    //       title: "LinkedIn URL",
+    //       type: "url",
+    //       initialValue: "https://linkedin.com/in/",
+    //     },
+    //   ],
+    //   options: {
+    //     collapsed: false,
+    //     collapsible: true,
+    //     columns: 2,
+    //   },
+    // },
     {
       name: "skills",
       title: "Skills",

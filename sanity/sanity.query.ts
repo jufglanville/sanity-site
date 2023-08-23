@@ -13,8 +13,9 @@ export async function getProfile(): Promise<ProfileType> {
       location,
       fullBio,
       email,
+      github,
+      linkedin,
       "resumeURL": resumeURL.asset->url,
-      socialLinks,
       "skills": skills[]->name,
     }`
   );

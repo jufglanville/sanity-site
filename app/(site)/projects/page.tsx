@@ -10,14 +10,10 @@ export default async function Project() {
     <>
       <section className="mb-16">
         <h1 className="text-3xl font-bold tracking-tight sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight">
-          Featured projects I&apos;ve built over the years
+          Featured Projects
         </h1>
         <p className="text-base text-zinc-400 leading-relaxed">
-          I&apos;ve worked on tons of little projects over the years but these
-          are the ones that I&apos;m most proud of. Many of them are
-          open-source, so if you see something that piques your interest, check
-          out the code and contribute if you have ideas for how it can be
-          improved.
+        I&apos;ve had my hands full with a bunch of projects over the years, and here&apos;s a sneak peek at a few you can explore:
         </p>
       </section>
 

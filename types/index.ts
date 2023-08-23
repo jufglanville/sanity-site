@@ -10,10 +10,11 @@ export type ProfileType = {
   },
   shortBio: string,
   email: string,
+  github: string,
+  linkedin: string,
   fullBio: PortableTextBlock[],
   location: string,
   resumeURL: string,
-  socialLinks: string[],
   skills: string[],
 };
 

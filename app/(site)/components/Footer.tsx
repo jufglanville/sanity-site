@@ -3,9 +3,6 @@ import { getProfile } from "@/sanity/sanity.query";
 export default async function Footer() {
   const profile = await getProfile();
 
-  //@ts-ignore
-  const githubUrl = profile.socialLinks.github;
-
   return (
     <footer className="mt-auto pt-20">
       <hr className="border-zinc-800" />
@@ -15,7 +12,7 @@ export default async function Footer() {
         </small>
 
         <small className="hover:underline transition-all duration-200">
-          <a href={githubUrl} target="_blank" rel="noreferrer noopener">
+          <a href={profile.github} target="_blank" rel="noreferrer noopener">
             Prepared by{" "}
             <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
               {profile.fullName}
